@@ -34,3 +34,7 @@ button {
 #author {
   color: var(--main-color);
 }
+
+.blue{
+    background:blue;
+}

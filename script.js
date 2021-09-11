@@ -7,9 +7,13 @@
  let quote;
  let arrayQuote;
 
+ const colors = ['#B7371B','#ADD52F','#2FD550','#2FD587', '#2FD5C7', '#2F91D5', '#2F46D5', '#872FD5'];
+ let backgroundColor;
+
  $(document).ready(function(){
     getQuote();
-    $('#new-quote').click(displayQuote);  
+    $('#new-quote').click(displayQuote);
+  
 });
 
 function getQuote(){
@@ -29,8 +33,7 @@ function getQuote(){
     })
     .catch(function(err) {
       // Une erreur est survenue
-    });
-   
+    }); 
 }
 
 function getRandomQuote(quotes){
@@ -46,7 +49,6 @@ function displayQuote(){
     $('#author').text(randomQuote.author);
     console.log("qfd");
     console.log(arrayQuote.length);
+    backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+    document.documentElement.style.setProperty('--main-color', backgroundColor)
 }
-
-
-

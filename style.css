@@ -9,11 +9,15 @@
 }
 
 body {
-  background-color: var(--main-color);
+   background-color: var(--main-color); 
 }
 
 .box {
   height: 100vh;
+}
+
+a{
+    color:white;
 }
 
 button {
